@@ -1,0 +1,5 @@
+{% extends 'layouts/_default.twig'%}
+
+{% block main_content %}
+    {% include 'questions/_form.twig' with { question: questions } %}
+{% endblock %}

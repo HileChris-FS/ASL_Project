@@ -1,0 +1,17 @@
+{% extends 'layouts/_default.twig'%}
+
+{% block main_content %}
+ <ul>
+    {% for quiz in quizzes %}
+        <li>
+            Name: {{ quiz.name }} Weight: {{ quiz.weight }} -
+            <a href="/quizzes/{{ quiz.id }}/edit">Edit</a>
+
+            <a href="/quizzes/{{ quiz.id }}/delete">Delete</a>
+        </li>
+    {% endfor %}
+ </ul>
+ <p>
+    <a href="/quizzes/new">Create New Quiz</a>
+ </p>
+{% endblock %}

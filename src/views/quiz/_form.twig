@@ -1,0 +1,20 @@
+{% if quizzes %}
+    <form action="/quizzes/{{ quizzes.id }}" method ="post">
+{% else %}
+    <form action="/quizzes/" method ="post">
+{% endif %}
+
+    <div>
+        <label for="name">Name: </label>
+        {%  if quiz %}
+            <input id="name" type="text" name="name" value="{{quiz.name}}"/>
+            <label for="weight">Weight: </label>
+            <input id="weight" type="text" name="weight" value="{{quiz.weight}}"/>
+        {% else %}
+            <input id="name" type="text" name="name" />
+            <label for="weight">Weight: </label>
+            <input id="weight" type="text" name="weight" />
+        {% endif %}
+    </div>
+    <input type="submit" value="Save Quiz" />
+</form>

@@ -1,0 +1,13 @@
+{% extends 'layouts/_default.twig'%}
+
+{% block main_content %}
+    <div>
+        <h1>A:{{ choices.a }} B:{{ choices.b }}</h1>
+        <p><strong>ID: </strong>{{ choices.id }} </p>
+        <p><strong>Created at: </strong>{{ choices.createdAt }}</p>
+        <p><strong>Updated Last: </strong>{{ choices.updatedAt }}</p>
+        <p>
+            <a href="/choices/{{ choices.id }}/delete">Delete</a>
+        </p>
+    </div>
+{% endblock %}
